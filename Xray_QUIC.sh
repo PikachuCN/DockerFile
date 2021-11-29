@@ -2,7 +2,7 @@
 echo
 echo -e "Xray 部署脚本 Debian 10系统"
 apt update -y
-apt install unzip curl
+apt -y install unzip curl
 curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
 chmod 777 /usr/local/etc/xray/config.json
 cat > /usr/local/etc/xray/config.json<<-EOF
@@ -89,4 +89,4 @@ systemctl restart xray
 echo -e "安装完成！"
 echo "正在获取 IP 地址信息，请耐心等待"
 local_ip=$(curl -4L api64.ipify.org)
-echo -e "vless://c6bdab75-75be-446a-84f9-2fee409b725d@${local_ip}:3389?encryption=none&security=none&type=quic&headerType=none&quicSecurity=&key=#12.qspp.net"
+echo -e "vless://c6bdab75-75be-446a-84f9-2fee409b725d@${local_ip}:3389?encryption=none&security=none&type=quic&headerType=none&quicSecurity=&key=#${local_ip}"
