@@ -1,8 +1,8 @@
 #!/bin/bash
 echo
 echo -e "Xray 部署脚本 Debian 10系统"
-apt update
-apt install unzip
+apt update -y
+apt install unzip curl
 curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
 chmod 777 /usr/local/etc/xray/config.json
 cat > /usr/local/etc/xray/config.json<<-EOF
