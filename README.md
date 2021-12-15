@@ -12,3 +12,6 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 三网测速：
 bash <(curl -Lso- https://git.io/Jlkmw)
+
+一些脚本：
+https://hostloc.com/thread-921605-1-11.html
