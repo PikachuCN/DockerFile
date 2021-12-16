@@ -15,3 +15,6 @@ bash <(curl -Lso- https://git.io/Jlkmw)
 
 一些脚本：
 https://hostloc.com/thread-921605-1-11.html
+
+一个测试工具
+wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
