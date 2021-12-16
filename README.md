@@ -18,3 +18,6 @@ https://hostloc.com/thread-921605-1-11.html
 
 一个测试工具
 wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+
+aws与az的开机面板：
+https://my.cdntip.top/
