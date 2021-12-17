@@ -21,3 +21,7 @@ wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/scr
 
 aws与az的开机面板：
 https://my.cdntip.top/
+
+[![Stats](https://github-readme-stats.vercel.app/api?username=zckun&show_icons=true&count_private=true)](https://github.com/ZCKun)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zckun&layout=compact)](https://github.com/ZCKun)
