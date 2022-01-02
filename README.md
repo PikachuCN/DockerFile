@@ -10,6 +10,9 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 WS:
 wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/PikachuCN/DockerFile/master/Xray_ws.sh" && chmod +x install.sh && bash install.sh
 
+gRPC:
+wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/PikachuCN/DockerFile/master/Xray_gRPC.sh" && chmod +x install.sh && bash install.sh
+
 三网测速：
 bash <(curl -Lso- https://git.io/Jlkmw)
 
