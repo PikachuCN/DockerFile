@@ -1,6 +1,6 @@
 #!/bin/bash
 echo
-echo -e "Xray By Debian 10 gRPC"
+echo -e "Xray By Debian 10 Vless gRPC"
 apt update -y
 apt -y install unzip curl
 curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
@@ -18,7 +18,7 @@ cat > /usr/local/etc/xray/config.json<<-EOF
       "settings": {
         "clients": [
           {
-            "id": "4dfe5a15-5e41-44cf-bf35-42854d52fc3c"
+            "id": "c6bdab75-75be-446a-84f9-2fee409b725d"
           }
         ],
         "decryption": "none"
