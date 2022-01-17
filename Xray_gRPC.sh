@@ -1,41 +1,61 @@
 #!/bin/bash
 echo
-echo -e "Xray By Debian 10 Trojan"
+echo -e "Xray By Debian 10 gRPC"
 apt update -y
 apt -y install unzip curl
 curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
 chmod 777 /usr/local/etc/xray/config.json
 cat > /usr/local/etc/xray/config.json<<-EOF
 {
-    "inbounds": [
-        {
-            "port": 443,
-            "listen": "127.0.0.1",
-            "protocol": "trojan",
-            "tag": "trojangRPCTCP",
-            "settings": {
-                "clients": [
-                    {
-                        "password": "c6bdab75-75be-446a-84f9-2fee409b725d",
-                        "email": "trojan_gRPC"
-                    }
-                ],
-                "fallbacks": [
-                    {
-                        "dest": "31300"
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "grpc",
-                "grpcSettings": {
-                    "serviceName": "wqxftrojangrpc"
-                }
-            }
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "4dfe5a15-5e41-44cf-bf35-42854d52fc3c"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": ""
         }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "blocked",
+      "protocol": "blackhole",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked"
+      }
     ]
+  }
 }
-
 EOF
 
   sed -i '/net.ipv4.tcp_ecn/d' /etc/sysctl.d/99-sysctl.conf
