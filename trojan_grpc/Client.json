@@ -59,6 +59,7 @@
       },
       "streamSettings": {
           "network": "grpc"
+        //trojan 协议没有grpcSettings 项，如需serviceName，直接跟着写即可。
       }
   }
   ],
