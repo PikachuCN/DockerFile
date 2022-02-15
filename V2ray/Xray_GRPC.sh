@@ -1,17 +1,17 @@
 #!/bin/bash
 echo
-echo -e "Xray 自动部署脚本 149"
+echo -e "Xray GRPC自动部署脚本 149"
 
 
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-mkdir /etc/v2ray/
+mkdir /etc/xray/
 wget https://github.com/XTLS/Xray-core/releases/download/v1.5.3/Xray-linux-64.zip
-unzip Xray-linux-64.zip -d /etc/v2ray/
-chmod +x /etc/v2ray/xray
-mkdir /var/log/v2ray/
+unzip Xray-linux-64.zip -d /etc/xray/
+chmod +x /etc/xray/xray
+mkdir /var/log/xray/
 
-cat > /etc/v2ray/config.json<<-EOF
+cat > /etc/xray/config.json<<-EOF
 {
   "log": {
     "loglevel": "warning"
@@ -65,7 +65,7 @@ cat > /etc/v2ray/config.json<<-EOF
 EOF
 
 cat > /root/start.sh<<-EOF
-	/etc/v2ray/xray -config /etc/v2ray/config.json
+	/etc/xray/xray -config /etc/xray/config.json
 	tail -f /dev/null
 EOF
 chmod 755 /root/start.sh
