@@ -6,7 +6,7 @@ echo -e "V2ray 自动部署脚本 149"
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 mkdir /etc/v2ray/
-wget https://github.com/v2ray/v2ray-core/releases/download/v4.22.1/v2ray-linux-64.zip
+wget https://github.com/v2ray/dist/raw/master/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip -d /etc/v2ray/
 chmod +x /etc/v2ray/v2ray
 mkdir /var/log/v2ray/
