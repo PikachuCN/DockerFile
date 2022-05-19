@@ -1,6 +1,6 @@
 #!/bin/bash
 echo
-echo -e "Xray GRPC自动部署脚本 149"
+echo -e "Xray WS自动部署脚本 2022-5-19"
 
 
 
