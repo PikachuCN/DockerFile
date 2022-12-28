@@ -20,6 +20,12 @@ hysteria:
 wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/PikachuCN/DockerFile/master/hysteria.sh" && chmod +x install.sh && bash install.sh
 
 
+hysteria for digitalocean debian 11:
+
+wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/PikachuCN/DockerFile/master/hysteria_od.sh" && chmod +x install.sh && bash install.sh
+
+
+
 三网测速：
 bash <(curl -Lso- https://git.io/Jlkmw)
 
